@@ -2,8 +2,8 @@
 
 # WESTERN GOVERNORS UNIVERSITY
 
-## D77 - REAL LIFE APPLICATIONS OF DATA STRUCTURES
+## D777 - REAL LIFE APPLICATIONS OF DATA STRUCTURES
 
-Welcome to D77 Real Life Applications of Data Structures!
+Welcome to D777 Real Life Applications of Data Structures!
 
 For specific task instructions and requirements for this assessment, please refer to the course page.

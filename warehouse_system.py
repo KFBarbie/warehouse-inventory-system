@@ -1,3 +1,5 @@
+from collections import deque
+
 def lookup_inventory(inventory, sku):
     if sku not in inventory:
         raise KeyError("SKU not found in inventory.")
@@ -11,3 +13,9 @@ def update_inventory(inventory, sku, quantity_change):
 
     inventory[sku] += quantity_change
     return inventory[sku]
+
+def process_orders(order_queue):
+    if not order_queue:
+        raise IndexError("No orders to process.")
+    return order_queue.popleft()
+

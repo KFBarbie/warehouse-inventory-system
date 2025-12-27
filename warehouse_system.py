@@ -25,3 +25,10 @@ def process_priority_task(priority_queue):
     if not priority_queue:
         raise IndexError("No priority tasks available.")
     return heapq.heappop(priority_queue)
+
+def generate_inventory_report(inventory, low_stock_threshold):
+    report = {}
+    for sku, quantity in inventory.items():
+        if quantity <= low_stock_threshold:
+            report[sku] = quantity
+    return report

@@ -27,7 +27,7 @@ def process_orders(order_queue):
     return order_queue.popleft()
 
 
-def process_priority_task(priority_queue):
+def process_priority_tasks(priority_queue):
 
     if not priority_queue:
         raise IndexError("No priority tasks available.")
@@ -57,3 +57,14 @@ if __name__ == "__main__":
 
     #Inventory Update
     print("Inventory after restock:", update_inventory(inventory, "SKU1002", 20))
+
+    #Order Processing
+    orders = deque(["Order1", "Order2", "Order3"])
+    print("Processed order:", process_orders(orders))
+    print("Processed order:", process_orders(orders))
+
+    #Priority task handling
+    priority_tasks=[]
+    heapq.heappush(priority_tasks, (1, "Urgent Restock"))
+    heapq.heappush(priority_tasks, (3, "Routine Check"))
+    print("Priority Tasks:", generate_inventory_report(inventory, 5))

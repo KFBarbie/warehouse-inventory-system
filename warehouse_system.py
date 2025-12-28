@@ -1,13 +1,16 @@
 from collections import deque
-
 import heapq
 
+
 def lookup_inventory(inventory, sku):
+
     if sku not in inventory:
         raise KeyError("SKU not found in inventory.")
     return inventory[sku]
 
+
 def update_inventory(inventory, sku, quantity_change):
+
     if sku not in inventory:
         raise KeyError("SKU not found in inventory.")
     if inventory[sku] + quantity_change < 0:
@@ -16,19 +19,38 @@ def update_inventory(inventory, sku, quantity_change):
     inventory[sku] += quantity_change
     return inventory[sku]
 
+
 def process_orders(order_queue):
+
     if not order_queue:
         raise IndexError("No orders to process.")
     return order_queue.popleft()
 
+
 def process_priority_task(priority_queue):
+
     if not priority_queue:
         raise IndexError("No priority tasks available.")
     return heapq.heappop(priority_queue)
 
+
 def generate_inventory_report(inventory, low_stock_threshold):
+
     report = {}
     for sku, quantity in inventory.items():
         if quantity <= low_stock_threshold:
             report[sku] = quantity
     return report
+
+
+#test block
+
+if __name__ == "__main__":
+    #sample inventory
+    inventory = {
+        "SKU1001":50,
+        "SKU1002":10,
+        "SKU1003":0
+    }
+    #Inventory lookup
+    print("Inventory Lookup:", lookup_inventory(inventory, "SKU1001"))

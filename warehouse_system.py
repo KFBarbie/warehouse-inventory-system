@@ -68,3 +68,12 @@ if __name__ == "__main__":
     heapq.heappush(priority_tasks, (1, "Urgent Restock"))
     heapq.heappush(priority_tasks, (3, "Routine Check"))
     print("Priority Tasks:", generate_inventory_report(inventory, 5))
+
+    #Analytics
+    print("Low stock report:", generate_inventory_report(inventory, 5))
+
+    #Error Handling
+    try:
+        lookup_inventory(inventory, "SKU9999")
+    except Exception as e:
+        print("Error Handled:", e)

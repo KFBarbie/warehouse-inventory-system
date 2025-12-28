@@ -54,3 +54,6 @@ if __name__ == "__main__":
     }
     #Inventory lookup
     print("Inventory Lookup:", lookup_inventory(inventory, "SKU1001"))
+
+    #Inventory Update
+    print("Inventory after restock:", update_inventory(inventory, "SKU1002", 20))

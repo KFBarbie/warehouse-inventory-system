@@ -74,6 +74,11 @@ if __name__ == "__main__":
 
     #Error Handling
     try:
-        lookup_inventory(inventory, "SKU9999")
+        lookup_inventory(inventory, "SKU1003")
     except Exception as e:
         print("Error Handled:", e)
+
+    try:
+        update_inventory(inventory, "SKU1002", -100)
+    except Exception as e:
+        print("Invalid Quantity:", e)

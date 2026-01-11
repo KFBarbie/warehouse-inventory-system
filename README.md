@@ -6,8 +6,8 @@ Python Vs. 3.13.3
 
 
 ##Project Description
-This project implements a simplified inventory and order management system for Corollary Warehousing, 
-developed for Pruhart Tech Solutions. The system is designed to support efficient inventory access, 
+This project implements a simplified inventory and order management system for warehousing, 
+developed for a fictional company. The system is designed to support efficient inventory access, 
 real-time inventory updates, order processing, priority-based task handling, and basic inventory anaytics.
 Multiple data structures are used to model real-world warehouse operations and ensure the system is efficient, 
 scalable, and fault-tolerant.

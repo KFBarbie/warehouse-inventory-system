@@ -1,10 +1,3 @@
-#README COROLLARY WAREHOUSE
-
-##Caitlin McCollom
-ID 001208434
-Python Vs. 3.13.3
-
-
 ##Project Description
 This project implements a simplified inventory and order management system for warehousing, 
 developed for a fictional company. The system is designed to support efficient inventory access, 
